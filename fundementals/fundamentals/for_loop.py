@@ -20,8 +20,7 @@ print(sum)
 
 
 for x in range(2018, 0 , -4):
-    if x % 2 == 0:
-        print(x)
+    print(x)
 
 def three_num(low_num, high_num, mult):
     for x in range(low_num, high_num +1,1):

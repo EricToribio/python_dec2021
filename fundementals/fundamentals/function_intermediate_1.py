@@ -34,7 +34,7 @@ students = [
 def iterate_dictionary(list):
     for i in range(0, len(list), 1):
         for x, y in list[i].items():
-            print(x+ '-' + y + ',')
+            print(f" {x} - {y} ,")
 
 iterate_dictionary(students) 
 # should output: (it's okay if each key-value pair ends up on 2 separate lines;
