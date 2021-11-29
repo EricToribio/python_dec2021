@@ -8,7 +8,6 @@ class User:		# here's what we have so far
         self.account.deposit(amount,account_type)
         self.display_user_balance(account_type)	
         # the specific user's account increases by the amount of the value received
-        print
         return self
 
     def open_new_account(self, int_rate ,amount , account_type):
