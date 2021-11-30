@@ -31,11 +31,21 @@ students = [
         {'first_name' : 'Mark', 'last_name' : 'Guillen'},
         {'first_name' : 'KB', 'last_name' : 'Tonel'}
     ]
-def iterate_dictionary(list):
-    for i in range(0, len(list), 1):
-        for x, y in list[i].items():
-            print(f" {x} - {y} ,")
+# def iterate_dictionary(list):
+#     for i in range(0, len(list), 1):
+#         for x, y in list[i].items():
+#             print(f" {x} - {y} ,")
+def iterateDictionary(myList):
+    for i in myList:
+        my_str = ''
+        for key, val in i.items():
+            my_str += (f"{key} - {val}")
+            if (key != list(i)[-1]):
+                my_str += (", ")
+        print(my_str)
 
+
+iterateDictionary(students)
 iterate_dictionary(students) 
 # should output: (it's okay if each key-value pair ends up on 2 separate lines;
 # bonus to get them to appear exactly as below!)
