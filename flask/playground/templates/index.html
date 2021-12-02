@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <style>
+        div {
+            gap: 10px;
+            display: inline-flex;
+            width: 300px;
+            height: 300px;
+            border: 3px solid black;
+        }
+    </style>
     <h1 style="text-align: center;">Welcome</h1>
 
     {% if play == "play" %}
     {% for i in range(num)%}
-    <div style="gap: 10px; display: inline-flex; width: 300px;height: 300px;background-color: {{color}}; border: 3px solid black;"></div>
+    <div style="background-color: {{color}};"></div>
     {% endfor %}
     {% endif %}
-    
+
 </body>
+
 </html>

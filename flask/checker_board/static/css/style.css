@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: blanchedalmond;
+}
+#header{
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+.color1 {
+    background-color: red;
+    color: red;
+}
+
+.color2{
+    background-color: black;
+}
+.container{
+    display: flex;
+    width: 40%;
+    min-height: 200px;
+    margin: 10px auto;
+    justify-content: center;
+}
+table tr td{
+    width: 50px;
+    height: 50px;
+    
+}
