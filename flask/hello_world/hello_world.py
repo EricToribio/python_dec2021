@@ -24,11 +24,6 @@ def default_hadler(e):
     return "Sorry!, No response. Try Again." , 404
 
 
-
-
-
-
-
 if __name__=="__main__":   # Ensure this file is being run directly and not from a different module    
     app.run(debug=True)    # Run the app in debug mode.
 
