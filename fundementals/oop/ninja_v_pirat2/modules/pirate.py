@@ -27,3 +27,6 @@ class Blunderbuss_Pirate ( Pirate ):
 class Axe_Pirate ( Pirate ):
     def __init__(self, name, strength=16, speed=10, health=200):
         super().__init__(name, strength=strength, speed=speed, health=health)
+
+
+

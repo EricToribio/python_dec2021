@@ -17,3 +17,6 @@ class Player:
     def shout(self):
             print("I'm a basic npc...blah")
             return self
+
+
+    

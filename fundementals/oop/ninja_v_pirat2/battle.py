@@ -43,8 +43,8 @@ class The_Showdown:
             self.attack(second, first)
 
 
-fighter1 
-fighter2  
+fighter1 = Blunderbuss_Pirate(input("enter name "))
+fighter2  = Sword_Ninja("bob")
 war = The_Showdown(fighter1,fighter2)
 
 war.fight()
