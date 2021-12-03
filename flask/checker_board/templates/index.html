@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}} ">
     <title>Document</title>
     <style>
-.color1 {
-    background-color: {{color1}};
+.color0 {
+    background-color: {{color0}};
 }
 h1{
-    color: {{color1}};
+    color: {{color0}};
 
 }
-.color2{
-    background-color: {{color2}};
+.color1{
+    background-color: {{color1}};
 }
 
     </style>
@@ -28,7 +28,7 @@ h1{
         {% for i in range(num1) %}
         <tr>
             {% for j in range(num2) %}
-            <td class="color{{(i+j)%2+1}}"></td>
+            <td class="color{{(i+j)%2}}"></td>
             
             {% endfor %}
 

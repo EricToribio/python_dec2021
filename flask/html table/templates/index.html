@@ -11,44 +11,25 @@
 </head>
 
 <body>
-    
-        <table class="table m-2">
-            <thead>
-                <tr class="row">
-                    <th class="col">First Name</th>
-                    <th class="col">Last Name</th>
-                    <th class="col">Full Name</th>
-                </tr>
-            </thead>
-            
-            <tbody class="row">
-                <tr class="col">
-                    {% for x in users %}
-                    
-                    <td class="row">{{ x.first_name }}</td>
-                    
-                    {% endfor %}
-            
-                </tr>
-                <tr class="col">
-                    {% for x in users %}
-                    
-                    <td class="row">{{ x.last_name }}</td>
-                    
-                    {% endfor %}
-            
-                </tr>
-                <tr class="col">
-                    {% for x in users %}
-                    
-                    <td class="row">{{ x.first_name  }} {{ x.last_name }} </td>
-                    
-                    {% endfor %}
-            
-                </tr>
-                
-            </tbody>
-        </table>
+
+    <table class="table m-2">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Full Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for x in users %}
+            <tr>
+                <td>{{ x.first_name }}</td>
+                <td>{{ x.last_name }}</td>
+                <td>{{ x.first_name }} {{ x.last_name }} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
 
 
