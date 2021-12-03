@@ -48,7 +48,7 @@ def iterateDictionary(someList):
     for dict in someList:
         text = ""
         for key in dict:
-            text += f'{key} - {dict[key]}, '
+            text += f' {dict[key]}, '
         print(text[:-2])
 
 iterateDictionary(students)
