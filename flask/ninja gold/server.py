@@ -10,8 +10,6 @@ def index():
     if "gold" not in session:
         session["gold"] = 0
 
-    if "activity_log" not in session:
-        session["activity_log"] = []
     return render_template("index.html")
 
 
@@ -32,13 +30,19 @@ def gold_rush():
         amt_gold = random.randint(-50,50)
         
     now = datetime.datetime.now()
-    session['log'] = f"<p class=text_log> Oh no! You've won {amt_gold} gold!! {now}</p>"
+    if amt_gold > 0:
+        session['log'] = f"<p class=text_log> Congratulations! You've won {amt_gold} gold!! {now}</p>"
+    else:
+        session['log'] = f"<p class=text_log> Oh no! You've lost {amt_gold} gold!! {now}</p>"
     # session["activity_log"].append(log)
     session["gold"] += amt_gold
     return redirect("/")
 
 
-
+@app.route('/clear')
+def clear():
+    session.clear()
+    return redirect('/')
 
 
 
