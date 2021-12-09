@@ -20,5 +20,6 @@ def enter():
     user.User.add_user(request.form)
     return redirect('/read')
 
+
 if __name__ == "__main__":
     app.run(debug=True)
