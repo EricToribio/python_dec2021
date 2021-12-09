@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="mx-auto text-center m-5" style="width: 300px;">
+        <a class="btn btn-success" href="/read">Home</a>
+        <h1>User {{some_user.id}}</h1>
+        <ul>
+            <li>Full Name: {{some_user.first_name}} {{some_user.last_name}}</li>
+            <li>Email: {{some_user.email}}</li>
+            <li>Created on: {{some_user.created_at}}</li>
+            <li>Last Updated On: {{some_user.updated_at}}</li>
+        </ul>
+        <a class="btn btn-warning" href="/users/{{some_user.id}}/edit"> Edit</a>
+        <a class="btn btn-danger" href="/users/{{some_user.id}}/destroy"> Delete</a>
+    </div>
+</body>
+
+</html>
