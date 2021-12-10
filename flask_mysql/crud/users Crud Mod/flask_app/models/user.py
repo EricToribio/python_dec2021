@@ -12,7 +12,6 @@ class User:
         self.updated_at = data['updated_at']
 
 
-
     def __repr__(self):
         return f"< first name: {self.first_name}, id:{self.id} > "
     # Now we use class methods to query our database
@@ -48,6 +47,7 @@ class User:
                     WHERE id = %(id)s;"""
 
         results = connectToMySQL(DB).query_db(query,data)
+        
 
     @classmethod
     def destroy(cls,data):

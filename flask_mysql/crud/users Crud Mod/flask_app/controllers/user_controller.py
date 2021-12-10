@@ -6,7 +6,7 @@ from flask_app import app
 @app.route('/')
 def index():
     return render_template("index.html")
-
+    
 @app.route('/read')
 def read_all():
     users = user.User.get_all()
@@ -37,12 +37,16 @@ def enter():
     user.User.add_user(request.form)
     return redirect('/read')
 
-@app.post('/update')
-def edit():
-    user.User.edit(request.form)
+@app.post('/update/<int:num>')
+def edit(num):
+    user_data ={
+        **request.form,
+        "id":num
+    }
+    user.User.edit(user_data)
     print(request.form)
     
-    return redirect(f"users/{request.form['id']}")
+    return redirect(f"/users/{num}")
 
 @app.route('/users/<int:num>/destroy')
 def delete(num):
