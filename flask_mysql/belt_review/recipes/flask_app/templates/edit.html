@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Edit</title>
+</head>
+<body>
+    <div class="d-flex  justify-content-between p-5">
+        <div>
+            <h1>Hello {{session['first_name']}}</h1>
+        </div>
+        <div>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+    <div class="text-dark ">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+             {% for message in messages %}
+             <p>{{message}}</p>
+                {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+    <div class="d-flex flex-wrap p-4 text-light ">
+        <form class="bg-dark mx-auto p-4" action="/edit/recipe/{{one_recipe.id}}" method="post">
+                <div>
+                    <label class="form-label" for="name">Name: </label>
+                    <input value="{{one_recipe.name}}" class="form-control" type="text" name="name" id="name">
+                </div>
+                <div>
+                    <label class="form-label" for="description">Description: </label>
+                    <input value="{{one_recipe.description}}" type="text" name="description" id="description" class="form-control">
+                </div>
+                <div>
+                    <label for="instructions" class="form-label">Instructions: </label>
+                    <textarea {{one_recipe.instructions}} class="form-control" name="instructions" id="instructions" cols="50" rows="20">{{one_recipe.instructions}}</textarea>
+                </div>
+                <div class="m-3">
+                    <label for="date_made" class="form-label">Date Made On: </label>
+                    <input value="{{one_recipe.date_made}}" type="date" name="date_made" id="date_made">
+                </div>
+                <div  class="mx-auto">
+                    <select class="form-select " name="under_30_min">
+                        <option selected>Is Recipe under 30 Minutes</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                <button class="btn btn-success mx-auto m-3">Edit</button>
+        </form>
+    </div>
+</body>
+</html>

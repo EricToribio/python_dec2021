@@ -38,7 +38,7 @@ class Dojo:
     def validate_dojo(data):
         is_valid = True
         if len(data['name']) < 4:
-            flash('Name must be at least ')
+            flash('Name must be at least 4 characters')
             is_valid = False
         if data['location'] == 'Choose location':
             flash('Please choose a location')
